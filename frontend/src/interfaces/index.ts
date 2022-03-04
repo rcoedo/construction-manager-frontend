@@ -2,6 +2,8 @@ export enum Specialty {
   Excavation = "Excavation",
   Plumbing = "Plumbing",
   Electrical = "Electrical",
+  Masonry = "Masonry",
+  Carpentry = "Carpentry",
 }
 
 export interface Company {
