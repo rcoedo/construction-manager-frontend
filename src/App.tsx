@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout";
 import { CompanyListPage } from "./pages/";
 import { useCompanyData, useSpecialtiesFilter, useNameFilter } from "./hooks";
@@ -23,13 +22,9 @@ export const App = () => {
         },
       }}
     >
-      <BrowserRouter>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<CompanyListPage />} />
-          </Routes>
-        </Layout>
-      </BrowserRouter>
+      <Layout>
+        <CompanyListPage />
+      </Layout>
     </AppStateContext.Provider>
   );
 };
