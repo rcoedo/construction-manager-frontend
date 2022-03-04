@@ -19,7 +19,7 @@ const styles: StylesConfig<Option, true> = {
     width: "100%",
     fontSize: "16px",
     outline: "none",
-    ...(state.isFocused ? { boxShadow: "4px 4px 0px -1px steelblue", background: "azure" } : {}),
+    ...(state.isFocused ? { boxShadow: "4px 4px 0px -1px steelblue", background: "ghostwhite" } : {}),
     ":hover": {
       cursor: "pointer",
       borderColor: "black",

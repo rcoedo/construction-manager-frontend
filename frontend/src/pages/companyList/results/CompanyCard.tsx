@@ -41,15 +41,18 @@ const CompanyCardSpecialtiesLabel = styled.div`
 
 const CompanyCardSpecialtiesList = styled.ul`
   flex: 0 1 75%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 `;
 
 const CompanyCardSpecialtiesListItem = styled.li`
-  @media only screen and ${Breakpoint.LG} {
-    margin: 0;
-    display: block;
+  :not(:last-child):after {
+    content: ", ";
   }
-  margin: 0.25rem;
-  display: inline;
+  :last-child:after {
+    content: ".";
+  }
 `;
 
 interface CompanyCardProps {
@@ -63,11 +66,11 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ value }) => (
     </CompanyCardLogoContainer>
     <CompanyCardRow>
       <Highlight>Name:</Highlight>&nbsp;
-      {value.name}
+      {value.name}.
     </CompanyCardRow>
     <CompanyCardRow>
       <Highlight>City:</Highlight>&nbsp;
-      {value.city}
+      {value.city}.
     </CompanyCardRow>
     <CompanyCardRow>
       <CompanyCardSpecialtiesContainer>

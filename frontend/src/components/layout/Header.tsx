@@ -5,10 +5,15 @@ const HeaderContainer = styled.div`
   padding: 1em;
 `;
 
+const Logo = styled.img`
+  height: 60px;
+  width: auto;
+`;
+
 const Header = () => {
   return (
     <HeaderContainer>
-      <img src={logo} alt="logo" />
+      <Logo src={logo} alt="logo" />
     </HeaderContainer>
   );
 };

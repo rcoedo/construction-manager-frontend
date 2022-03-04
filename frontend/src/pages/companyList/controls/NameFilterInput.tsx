@@ -10,7 +10,7 @@ export const NameFilterInput = styled.input`
   border-radius: 3px;
   &:focus {
     outline: none;
-    background: azure;
+    background: ghostwhite;
     box-shadow: 4px 4px 0px -1px steelblue;
   }
   &:hover {

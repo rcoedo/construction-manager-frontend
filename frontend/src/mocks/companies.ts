@@ -90,7 +90,7 @@ export const protoric = {
 
 export const buildfolk = {
   id: "76152dd8-6a56-4f12-b974-943bd51773a1",
-  name: "buildfolk",
+  name: "Build Folk",
   specialties: [Specialty.Masonry, Specialty.Excavation, Specialty.Carpentry],
   img: "buildfolk.png",
   city: "London",
@@ -106,7 +106,7 @@ export const architus = {
 
 export const machinebasics = {
   id: "3e756aaa-76f3-48e3-9ebf-3ecceae77677",
-  name: "machinebasics",
+  name: "Machine Basics",
   specialties: [Specialty.Excavation, Specialty.Masonry],
   img: "machinebasics.png",
   city: "Paris",
@@ -114,7 +114,7 @@ export const machinebasics = {
 
 export const projecture = {
   id: "29dff5b0-08e1-4d96-aa06-69596105db50",
-  name: "projecture",
+  name: "Projecture",
   specialties: [Specialty.Carpentry, Specialty.Electrical, Specialty.Excavation, Specialty.Masonry, Specialty.Plumbing],
   img: "projecture.png",
   city: "Berlin",
