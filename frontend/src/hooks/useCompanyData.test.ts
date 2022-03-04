@@ -44,4 +44,12 @@ describe("useCompanyData", () => {
 
     expect(result.current.isLoading).toEqual(false);
   });
+
+  test("returns a list with the different specialties from the companies", async () => {
+    const { result, waitForValueToChange } = renderHook(() => useCompanyData());
+
+    await waitForValueToChange(() => result.current.companies);
+
+    expect(result.current.specialties).toEqual(["Plumbing"]);
+  });
 });

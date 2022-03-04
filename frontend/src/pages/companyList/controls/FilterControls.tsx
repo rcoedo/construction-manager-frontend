@@ -7,10 +7,8 @@ import { NameFilterInput, NameFilterInputOnChangeHandler } from "./NameFilterInp
 import { SpecialtyFilterLabels } from "./SpecialtyFilterLabels";
 import { SpecialtyFilterSelect, SpecialtyFilterSelectOnChangeHandler, toOption } from "./SpecialtyFilterSelect";
 
-const FiltercontrolsContainer = styled.div`
+const FilterControlsContainer = styled.div`
   @media only screen and ${Breakpoint.LG} {
-    width: 70%;
-    margin: auto;
     flex-direction: row;
   }
   display: flex;
@@ -55,7 +53,7 @@ export const FilterControls = () => {
   );
 
   return (
-    <FiltercontrolsContainer>
+    <FilterControlsContainer>
       <NameFilterInputContainer>
         <NameFilterInput value={name} onChange={handleSearchInputChange} />
       </NameFilterInputContainer>
@@ -68,6 +66,6 @@ export const FilterControls = () => {
         />
       </SpecialtyFilterSelectContainer>
       <SpecialtyFilterLabels value={specialtiesFilter} onLabelClick={removeSpecialtiesFilter} />
-    </FiltercontrolsContainer>
+    </FilterControlsContainer>
   );
 };

@@ -1,4 +1,3 @@
-import CompanyDetailsPage from "./company-details/CompanyDetailsPage";
-import CompanyListPage from "./company-list/CompanyListPage";
+import CompanyListPage from "./companyList/CompanyListPage";
 
-export { CompanyDetailsPage, CompanyListPage };
+export { CompanyListPage };

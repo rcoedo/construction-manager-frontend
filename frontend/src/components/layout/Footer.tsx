@@ -3,7 +3,7 @@ import { FaGithub, FaMedium, FaLinkedin } from "react-icons/fa";
 
 const FooterContainer = styled.div`
   font-size: 90%;
-  margin: auto;
+  margin: 2rem auto;
   width: 30%;
   text-align: center;
 `;

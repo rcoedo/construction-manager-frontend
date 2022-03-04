@@ -7,7 +7,7 @@ interface Option {
   value: string;
 }
 
-export const toOption = (specialty: Specialty): Option => ({ label: specialty, value: specialty });
+export const toOption = (specialty: Specialty): Option => ({ label: `[${specialty}]`, value: specialty });
 
 const styles: StylesConfig<Option, true> = {
   control: (provided, state) => ({
@@ -41,6 +41,13 @@ const styles: StylesConfig<Option, true> = {
     border: "2px solid black",
     borderRadius: "3px",
   }),
+  loadingIndicator: (provided, state) => ({ visibility: "hidden" }),
+  indicatorSeparator: (provided, state) => ({ visibility: "hidden" }),
+  clearIndicator: (provided, state) => ({ visibility: "hidden" }),
+  noOptionsMessage: (provided, state) => ({ ...provided, color: "black" }),
+  loadingMessage: (provided, state) => ({ ...provided, color: "black" }),
+  dropdownIndicator: (provided, state) => ({ ...provided, color: "black", ":hover": { color: "black" } }),
+  placeholder: (provided, state) => ({ ...provided, color: "black" }),
 };
 
 interface SpecialtyFilterSelectProps {
@@ -55,7 +62,7 @@ export type SpecialtyFilterSelectOnChangeHandler = (options: MultiValue<Option>)
 export const SpecialtyFilterSelect: React.FC<SpecialtyFilterSelectProps> = ({ value, options, isLoading, onChange }) => {
   return (
     <ReactSelect
-      placeholder="filter"
+      placeholder="[filter]"
       value={value}
       isLoading={isLoading}
       options={options}

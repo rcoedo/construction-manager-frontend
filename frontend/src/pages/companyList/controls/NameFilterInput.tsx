@@ -15,6 +15,7 @@ export const NameFilterInput = styled.input`
   }
   &:hover {
     box-shadow: 4px 4px 0px -1px steelblue;
+    cursor: pointer;
   }
 `;
 

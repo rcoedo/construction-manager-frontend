@@ -1,13 +1,12 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/layout";
-import { CompanyListPage, CompanyDetailsPage } from "./pages/";
+import { CompanyListPage } from "./pages/";
 import { useCompanyData, useSpecialtiesFilter, useNameFilter } from "./hooks";
 import { AppStateContext } from "./hooks/useAppState";
-import { getSpecialties } from "./utils";
 
 export const App = () => {
-  const { companies, isLoading } = useCompanyData();
+  const { companies, specialties, isLoading } = useCompanyData();
   const { nameFilter, nameFilterActions } = useNameFilter();
   const { specialtiesFilter, specialtiesFilterActions } = useSpecialtiesFilter();
 
@@ -16,7 +15,7 @@ export const App = () => {
       value={{
         companies,
         isLoading,
-        specialties: getSpecialties(companies),
+        specialties,
         filters: { name: nameFilter, specialties: specialtiesFilter },
         actions: {
           ...nameFilterActions,
@@ -28,9 +27,6 @@ export const App = () => {
         <Layout>
           <Routes>
             <Route path="/" element={<CompanyListPage />} />
-            <Route path="/company" element={<CompanyDetailsPage />}>
-              <Route path=":companyId" element={<CompanyDetailsPage />} />
-            </Route>
           </Routes>
         </Layout>
       </BrowserRouter>

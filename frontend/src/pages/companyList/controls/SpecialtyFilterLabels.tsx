@@ -16,7 +16,7 @@ const SpecialtyLabel = styled.div`
   padding: 0.5em;
   &:hover {
     text-decoration: 3px line-through;
-    background: lightcoral;
+    background: orangered;
     cursor: pointer;
   }
 `;

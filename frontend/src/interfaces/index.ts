@@ -5,6 +5,7 @@ export enum Specialty {
 }
 
 export interface Company {
+  id: string;
   name: string;
   specialties: Specialty[];
   img: string;

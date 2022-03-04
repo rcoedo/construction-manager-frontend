@@ -13,6 +13,9 @@ const ContentContainer = styled.div`
   @media only screen and ${Breakpoint.LG} {
     width: 80%;
   }
+  @media only screen and ${Breakpoint.XLG} {
+    width: 60%;
+  }
 `;
 
 interface ContentProps {
