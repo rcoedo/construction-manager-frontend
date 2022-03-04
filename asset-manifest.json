@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/construction-manager-frontend/static/css/main.e6b62283.css",
+    "main.js": "/construction-manager-frontend/static/js/main.9adbebaa.js",
+    "static/js/787.21b4abb7.chunk.js": "/construction-manager-frontend/static/js/787.21b4abb7.chunk.js",
+    "static/media/logo.svg": "/construction-manager-frontend/static/media/logo.8a42a3dc4d5f2cee8a3bb5146e2469f4.svg",
+    "index.html": "/construction-manager-frontend/index.html",
+    "main.e6b62283.css.map": "/construction-manager-frontend/static/css/main.e6b62283.css.map",
+    "main.9adbebaa.js.map": "/construction-manager-frontend/static/js/main.9adbebaa.js.map",
+    "787.21b4abb7.chunk.js.map": "/construction-manager-frontend/static/js/787.21b4abb7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6b62283.css",
+    "static/js/main.9adbebaa.js"
+  ]
+}
