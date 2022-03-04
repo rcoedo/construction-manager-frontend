@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Company } from "../../../interfaces";
 import { Highlight } from "../../../components/common";
-import { Breakpoint } from "../../../utils";
 
 const CompanyCardContainer = styled.div`
   display: grid;
