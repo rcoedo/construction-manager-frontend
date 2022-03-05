@@ -78,7 +78,7 @@ export const CompanyCard: React.FC<CompanyCardProps> = ({ value }) => (
         </CompanyCardSpecialtiesLabel>
         <CompanyCardSpecialtiesList>
           {value.specialties.map((specialty) => (
-            <CompanyCardSpecialtiesListItem>{specialty}</CompanyCardSpecialtiesListItem>
+            <CompanyCardSpecialtiesListItem key={specialty}>{specialty}</CompanyCardSpecialtiesListItem>
           ))}
         </CompanyCardSpecialtiesList>
       </CompanyCardSpecialtiesContainer>

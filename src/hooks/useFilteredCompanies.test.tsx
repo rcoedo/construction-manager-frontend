@@ -48,19 +48,25 @@ describe("useFilteredCompanies", () => {
   });
 
   test("filters companies properly by specialty", () => {
+    const specialty = Specialty.Electrical;
+
     const view = renderHook(() => useFilteredCompanies(), {
       wrapper: ({ children }) => (
-        <AppStateContext.Provider value={{ ...state, filters: { ...state.filters, specialties: [Specialty.Electrical] } }}>
+        <AppStateContext.Provider
+          value={{
+            ...state,
+            filters: { ...state.filters, specialties: [specialty] },
+          }}
+        >
           {children}
         </AppStateContext.Provider>
       ),
     });
 
-    expect(view.result.current).toEqual([
-      companies.supplypipe,
-      companies.electrosentry,
-      companies.gridwire,
-      companies.powerworkshop,
-    ]);
+    const allIncluded = view.result.current
+      .map((company) => company.specialties.includes(specialty))
+      .reduce((acc, curr) => acc && curr);
+
+    expect(allIncluded).toBe(true);
   });
 });
